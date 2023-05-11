@@ -1,22 +1,24 @@
 ########### GET USER BY ID #############
 GET http://localhost:4000/users/A242o2380
 
+
 ########### GET ALL USERS #############
 GET http://localhost:4000/users
+
 
 ########### ADD A USER #############
 POST http://localhost:4000/users
 Content-Type: application/json
 
 {
-    "email":"ligma@gmail.com",
-    "userPassword":">793+d8c",
-    "firstName":"Ligma",
-    "lastName":"Boruz",
-    "streetAddress":"New new york",
-    "city":"New York",
-    "country":"USA",
-    "phone":"5579-229"
+    "email":"anitalaif@gmail.com",
+    "userPassword":"Password2023",
+    "firstName":"Anita",
+    "lastName":"Laif",
+    "streetAddress":"Malewa Rd.",
+    "city":"Nairobi",
+    "country":"Kenya",
+    "phone":"011879779"
 }
 
 
@@ -35,5 +37,16 @@ Content-Type: application/json
     "phone":"5579-229"
 }
 
+
 ######## DELETE USER ###########
 DELETE http://localhost:4000/users/1212o2331
+
+
+######## LOGIN USER ###########
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "email": "maina254@gmail.com",
+    "userPassword": ">793+d8c"
+}

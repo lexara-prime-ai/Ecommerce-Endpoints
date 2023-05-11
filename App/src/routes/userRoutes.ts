@@ -2,7 +2,7 @@
 ///////// IMPORTS //////////
 ////////////////////////////
 import { Router } from "express";
-import { addUser, deleteUser, getUserById, getUsers, updateUser } from "../controllers/userController";
+import { addUser, deleteUser, getUserById, getUsers, loginUser, updateUser } from "../controllers/userController";
 
 // INITIALIZE ROUTER
 const userRoutes = Router();
@@ -12,6 +12,7 @@ userRoutes.get('/:userId', getUserById); // GET USER BY ID
 userRoutes.get('', getUsers);            // GET ALL USERS
 //// POST ////
 userRoutes.post('', addUser);            // ADD USER
+userRoutes.post('/login', loginUser);  // USER LOGIN
 //// DELETE ////
 userRoutes.delete('/:userId', deleteUser); // DELETE USER
 //// UPDATE ////
