@@ -4,6 +4,30 @@
 import { Request } from "express";
 
 // INTERFACES
+interface decodedData {
+    userId: string
+    email: string
+    firstName: string
+    lastName: string
+}
+
+interface Info extends Request {
+    info?: decodedData
+}
+
+interface Product extends Request {
+    body: {
+        productName: string
+        productImage: string
+        productDescription: string
+        price: number
+    },
+    params: {
+        productId: string
+    },
+    info?:decodedData
+}
+
 interface User extends Request {
     // userPassword(userPassword: string, userPassword1: any): unknown;
     body: {
@@ -19,27 +43,4 @@ interface User extends Request {
     params: {
         userId: string
     }
-}
-
-interface Product extends Request {
-    body: {
-        productName: string
-        productImage: string
-        productDescription: string
-        price: number
-    },
-    params: {
-        productId: string
-    }
-}
-
-interface decodedData {
-    userId: string
-    email: string
-    firstName: string
-    lastName: string
-}
-
-interface Info extends Request {
-    info?: decodedData
 }

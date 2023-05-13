@@ -12,18 +12,21 @@ export const addProduct = async (req: Product, res: Response) => {
             productName,
             productImage,
             productDescription,
-            price
+            price 
         } = req.body;
-        // EXECUTE STORED PROCEDURE | addProduct
-        await DB_OPERATIONS.EXECUTE('addProduct', {
-            productId,
-            productName,
-            productImage,
-            productDescription,
-            price
-        });
-
-        res.status(201).json({
+        // CHECK IF token INFO EXISTS & READ TOKEN INFO i.e identify product owner from the  token used
+        if (req.info) {
+            // EXECUTE STORED PROCEDURE | addProduct
+            await DB_OPERATIONS.EXECUTE('addProduct', {
+                productId,
+                productName,
+                productImage,
+                productDescription,
+                price,
+                owner: req.info.userId
+            });
+        }
+        return res.status(201).json({
             message: 'Product added successfully!'
         });
     } catch (error: any) {
