@@ -1,0 +1,4 @@
+/App/build
+/App/node_modules
+/App/.env
+/Backend/node_modules

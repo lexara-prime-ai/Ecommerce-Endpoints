@@ -1,5 +1,5 @@
 ########### GET USER BY ID #############
-GET http://localhost:4000/users/A242o2380
+GET http://localhost:4000/users/12133
 
 
 ########### GET ALL USERS #############
@@ -27,7 +27,7 @@ PUT http://localhost:4000/users/12133
 Content-Type: application/json
 
 {
-    "email":"ligmaborz@gmail.com",
+    "email":"ligmaborz2@gmail.com",
     "userPassword":">793+d8c",
     "firstName":"Ligma",
     "lastName":"Boruz",

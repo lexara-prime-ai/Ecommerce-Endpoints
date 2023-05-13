@@ -34,18 +34,42 @@ BEGIN
         phone
         )
     VALUES(
-        @userId,
-        @email,
-        @userPassword,
-        @firstName,
-        @lastName,
-        @streetAddress,
-        @city,
-        @country,
-        @phone
+            @userId,
+            @email,
+            @userPassword,
+            @firstName,
+            @lastName,
+            @streetAddress,
+            @city,
+            @country,
+            @phone
     )
 END
 --########################
 --EXECUTE STORED PROCEDURE
 --########################
 EXEC addUser '12133', 'maina@gmail.com', 'pwd123', 'Derick', 'Maina', 'Kakamega-kisumu Rd.', 'Kakamega', 'Kenya', '0722847312'
+
+EXEC addUser
+        '1212o2331',
+        'johndoe@gmail.com',
+        '12345',
+        'John',
+        'Doe',
+        'Nyeri Rd.',
+        'Nyeri',
+        'Kenya',
+        '0701281916'
+
+EXEC addUser
+        'A242o2380',
+        'peterpan@gmail.com',
+        '1435',
+        'Peter',
+        'Pan',
+        'Never Rd.',
+        'Neverland',
+        'Utopia',
+        '750-23423'
+
+SELECT * FROM Users

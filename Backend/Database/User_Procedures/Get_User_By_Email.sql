@@ -13,4 +13,4 @@ END
 --########################
 --EXECUTE STORED PROCEDURE
 --########################
-EXEC getUserByEmail @email='petercullen@gmail.com'
+EXEC getUserByEmail @email='johndoe@gmail.com'

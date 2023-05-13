@@ -8,6 +8,8 @@ import { log } from 'console';
 import { RequestFormat } from '../../types';
 import { DB_FUNCTIONS } from '../helpers/DB_FUNCTIONS';
 import { validationSchema } from '../helpers/LOGIN_VALIDATION';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 // EXPORT MODULE | GET USER BY ID
 export const getUserById = async (req: Request<{ userId: string }>, res: Response) => {
@@ -34,7 +36,7 @@ export const getUsers = async (req: RequestFormat, res: Response) => {
         let users = await (await DB_FUNCTIONS.EXECUTE('getUsers')).recordset;
         res.status(200).json(users);
     } catch (error: any) {
-        res.status(500).json(error);
+        res.status(500).json(error.message);
     }
 }
 
@@ -63,11 +65,13 @@ export const addUser = async (req: RequestFormat, res: Response) => {
         if (error) {
             return res.status(404).json(error.details[0].message);
         }
+        // HASH PASSWORD
+        let hashedPassword = await bcrypt.hash(userPassword, 10);
         // EXECUTE STORED PROCEDURE
         await DB_FUNCTIONS.EXECUTE('addUser', {
             userId,
             email,
-            userPassword,
+            userPassword:hashedPassword,
             firstName,
             lastName,
             streetAddress,
@@ -79,7 +83,7 @@ export const addUser = async (req: RequestFormat, res: Response) => {
             message: 'User added successfully!'
         });
     } catch (error: any) {
-        res.status(500).json(error);
+        res.status(500).json(error.message);
     }
 }
 
@@ -89,11 +93,17 @@ export const updateUser = async (req: Request<{ userId: string }>, res: Response
         const { userId } = req.params;
         // EXECUTE STORED PROCEDURE
         (await DB_FUNCTIONS.EXECUTE('updateUser', { userId })).recordset[0];
+        // CHECK IF USER EXISTS
+        if (!userId) {
+            res.status(404).json({ 
+                message: 'User not found!' 
+            })
+        }
         res.status(201).json({
             message: 'Update successful!'
         });
     } catch (error: any) {
-        res.status(500).json(error);
+        res.status(500).json(error.message);
     }
 }
 
@@ -113,7 +123,7 @@ export const deleteUser = async (req: RequestFormat, res: Response) => {
             message: 'User deleted!'
         });
     } catch (error: any) {
-        res.status(500).json(error);
+        res.status(500).json(error.message);
     }
 }
 
