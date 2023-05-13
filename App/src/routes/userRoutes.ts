@@ -16,7 +16,7 @@ userRoutes.post('/login', loginUser);  // USER LOGIN
 //// DELETE ////
 userRoutes.delete('/:userId', deleteUser); // DELETE USER
 //// UPDATE ////
-userRoutes.put('/:userId', updateUser);
+userRoutes.put('/:userId', updateUser); // UPDATE USER
 
 // EXPORTS
 export default userRoutes;

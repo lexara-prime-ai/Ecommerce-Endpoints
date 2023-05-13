@@ -1,3 +1,7 @@
+#*************************************#
+#*********** USER REQUESTS ***********#
+#*************************************#
+
 ########### GET USER BY ID #############
 GET http://localhost:4000/users/12133
 
@@ -11,30 +15,30 @@ POST http://localhost:4000/users
 Content-Type: application/json
 
 {
-    "email":"anitalaif@gmail.com",
+    "email":"marymagdalene@gmail.com",
     "userPassword":"Password2023",
-    "firstName":"Anita",
-    "lastName":"Laif",
-    "streetAddress":"Malewa Rd.",
+    "firstName":"Mary",
+    "lastName":"Magdalene",
+    "streetAddress":"Langata Rd.",
     "city":"Nairobi",
     "country":"Kenya",
-    "phone":"011879779"
+    "phone":"011672789"
 }
 
 
 ########### UPDATE USER #############
-PUT http://localhost:4000/users/12133
+PUT http://localhost:4000/users/1212o2331
 Content-Type: application/json
 
 {
-    "email":"ligmaborz2@gmail.com",
+    "email":"kariukijohn@gmail.com",
     "userPassword":">793+d8c",
-    "firstName":"Ligma",
-    "lastName":"Boruz",
-    "streetAddress":"New new york",
-    "city":"New York",
+    "firstName":"John",
+    "lastName":"Kamau",
+    "streetAddress":"Lincolin Rd.",
+    "city":"Miami",
     "country":"USA",
-    "phone":"5579-229"
+    "phone":"5573-425"
 }
 
 
@@ -50,3 +54,49 @@ Content-Type: application/json
     "email": "maina254@gmail.com",
     "userPassword": ">793+d8c"
 }
+
+#************ END | USERS  ***********#
+
+#*****************************************#
+#*********** PRODUCT REQUESTS ***********#
+#****************************************#
+
+######### ADD PRODUCT ###########
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+    "productName": "SVS SB-4000",
+    "productImage": "/product/img",
+    "productDescription": "Breathtaking output below 15Hz with pinpoint accuracy for reference performance.",
+    "price": 4000
+}
+
+{
+    "productName": "SVS PB-4000",
+    "productImage": "/product/img",
+    "productDescription": "Massive, effortless bass with stunning musicality for reference performance.",
+    "price": 4500
+}
+
+######### DELETE PRODUCT ##########
+DELETE http://localhost:4000/products/12222
+
+######## UPDATE PRODUCT ###########
+PUT http://localhost:4000/products/687a7a79-e292-43b2-9fc0-1566aed48735
+Content-Type: application/json
+
+{
+    "productName": "SVS SB-4000",
+    "productImage": "/product/img",
+    "productDescription": "Breathtaking output below 15Hz with pinpoint accuracy for reference performance.",
+    "price": 4200
+}
+
+
+######### GET ALL PRODUCTS ##########
+GET http://localhost:4000/products
+
+####### GET PRODUCT BY ID ########
+GET http://localhost:4000/products/687a7a79-e292-43b2-9fc0-1566aed48735
+#************ END | PRODUCTS  ************#

@@ -4,7 +4,8 @@
 import { Request } from "express";
 
 // INTERFACES
-interface RequestFormat extends Request {
+interface User extends Request {
+    // userPassword(userPassword: string, userPassword1: any): unknown;
     body: {
         email: string
         userPassword: string
@@ -20,3 +21,25 @@ interface RequestFormat extends Request {
     }
 }
 
+interface Product extends Request {
+    body: {
+        productName: string
+        productImage: string
+        productDescription: string
+        price: number
+    },
+    params: {
+        productId: string
+    }
+}
+
+interface decodedData {
+    userId: string
+    email: string
+    firstName: string
+    lastName: string
+}
+
+interface Info extends Request {
+    info?: decodedData
+}

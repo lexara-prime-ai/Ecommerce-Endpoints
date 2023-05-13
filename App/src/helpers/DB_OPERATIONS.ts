@@ -4,7 +4,7 @@
 import mssql from 'mssql';
 import { sqlServerConfig } from '../config/config';
 /////////////////////////////////////////
-// HELPER CLASS : DB_FUNCTIONS         //
+// HELPER CLASS : DB_OPERATIONS        //
 // This class establishes a connection //
 // with a Database and provides        //
 // methods for interacting             //
@@ -12,7 +12,7 @@ import { sqlServerConfig } from '../config/config';
 ////////////////////////////////////////
 
 // EXPORT CLASS dbFunctions
-export class DB_FUNCTIONS {
+export class DB_OPERATIONS {
     // MAKE THE pool PROPERTY ONLY
     // ACCESSIBLE  WITHIN THE CLASS
     // DB_FUNCTIONS USING THE private
@@ -53,7 +53,7 @@ export class DB_FUNCTIONS {
         // await THE RESPONSE
         let request: mssql.Request = await (await this.pool).request();
         // CALL THE APPEND METHOD AND APPEND THE DATA
-        request = DB_FUNCTIONS.appendRequests(request, data);
+        request = DB_OPERATIONS.appendRequests(request, data);
 
         return await request.execute(storedProcedure);
     }
@@ -62,6 +62,6 @@ export class DB_FUNCTIONS {
     // Take 1 parameter : queryString<string>
     /////////////////////////////////////////
     static async QUERY(queryString:string) {
-        return (await (await DB_FUNCTIONS).pool).request().query(queryString)
+        return (await (await DB_OPERATIONS).pool).request().query(queryString)
     }
 }
