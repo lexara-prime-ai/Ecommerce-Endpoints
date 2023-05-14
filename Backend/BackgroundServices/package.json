@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce_background_services",
+  "version": "1.0.0",
+  "description": "Background services(i.e Mailing, Promos etc)",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "nodemon ./build/index.js"
+  },
+  "author": "Samuel Ndmbuki & Irfan Ghat",
+  "license": "ISC",
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/ejs": "^3.1.2",
+    "@types/mssql": "^8.1.2",
+    "@types/node-cron": "^3.0.7",
+    "@types/nodemailer": "^6.4.7",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "mssql": "^9.1.1",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.2"
+  }
+}

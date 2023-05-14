@@ -7,15 +7,11 @@ import { addUser, deleteUser, getUserById, getUsers, loginUser, updateUser } fro
 // INITIALIZE ROUTER
 const userRoutes = Router();
 // ROUTES
-//// GET ////
-userRoutes.get('/:userId', getUserById); // GET USER BY ID
-userRoutes.get('', getUsers);            // GET ALL USERS
-//// POST ////
-userRoutes.post('', addUser);            // ADD USER
+userRoutes.get('', getUsers);          // GET ALL USERS
+userRoutes.post('', addUser);          // ADD USER
 userRoutes.post('/login', loginUser);  // USER LOGIN
-//// DELETE ////
+userRoutes.get('/:userId', getUserById); // GET USER BY ID
 userRoutes.delete('/:userId', deleteUser); // DELETE USER
-//// UPDATE ////
 userRoutes.put('/:userId', updateUser); // UPDATE USER
 
 // EXPORTS

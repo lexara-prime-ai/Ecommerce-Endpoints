@@ -29,7 +29,6 @@ interface Product extends Request {
 }
 
 interface User extends Request {
-    // userPassword(userPassword: string, userPassword1: any): unknown;
     body: {
         email: string
         userPassword: string

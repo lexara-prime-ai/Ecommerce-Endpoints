@@ -1,10 +1,11 @@
 {
-  "name": "working-with-endpoints",
+  "name": "api-endpoints",
   "version": "1.0.0",
-  "description": "Ecommerce backend",
-  "main": "index.js",
+  "description": "REST API(SQL database endpoints)",
+  "main": "./build/server.js",
   "scripts": {
-    "start": "nodemon ./build/server.js"
+    "build": "tsc",
+    "start": "npm run build && nodemon ./build/server.js"
   },
   "author": "Irfan Ghat",
   "license": "ISC",

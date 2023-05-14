@@ -31,7 +31,7 @@ END
 --########################
 --EXECUTE STORED PROCEDURE
 --########################
-EXEC addProduct '12321', 'SVS PB16 Ultra', '/product/img', 'Ported subwoofer', '2000'
+EXEC addProduct '12378', 'SVS PB16 Mini', '/product/img', 'Mini ported subwoofer', '1000'
 EXEC addProduct '12222', 'SVS SB16 Ultra', '/product/img', 'Sealed subwoofer', '2400'
 
 --#####################################

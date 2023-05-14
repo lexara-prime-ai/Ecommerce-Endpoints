@@ -2,3 +2,7 @@
 /App/node_modules
 /App/.env
 /Backend/node_modules
+/Backend/build
+/Backend/BackgroundServices/node_modules
+/Backend/BackgroundServices/build
+/Backend/BackgroundServices/.env

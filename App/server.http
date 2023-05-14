@@ -3,7 +3,7 @@
 #*************************************#
 
 ########### GET USER BY ID #############
-GET http://localhost:4000/users/12133
+GET http://localhost:4000/users/bee2f213-39d2-42a3-990c-f9836fbb848e
 
 
 ########### GET ALL USERS #############
@@ -14,31 +14,42 @@ GET http://localhost:4000/users
 POST http://localhost:4000/users
 Content-Type: application/json
 
+# {
+#     "email":"marymagdalene@gmail.com",
+#     "userPassword":"Password2023",
+#     "firstName":"Mary",
+#     "lastName":"Magdalene",
+#     "streetAddress":"Langata Rd.",
+#     "city":"Nairobi",
+#     "country":"Kenya",
+#     "phone":"011672789"
+# }
+
 {
-    "email":"marymagdalene@gmail.com",
-    "userPassword":"Password2023",
-    "firstName":"Mary",
-    "lastName":"Magdalene",
-    "streetAddress":"Langata Rd.",
-    "city":"Nairobi",
-    "country":"Kenya",
-    "phone":"011672789"
+    "email":"petercullen@gmail.com",
+    "userPassword":"Tr4ns4mars",
+    "firstName":"Peter",
+    "lastName":"Cullen",
+    "streetAddress":"Lincolin Rd.",
+    "city":"New York",
+    "country":"USA",
+    "phone":"555-1167"
 }
 
 
 ########### UPDATE USER #############
-PUT http://localhost:4000/users/1212o2331
+PUT http://localhost:4000/users/0aafae19-8d15-455b-a1a6-2aeb77534c88
 Content-Type: application/json
 
 {
-    "email":"kariukijohn@gmail.com",
-    "userPassword":">793+d8c",
-    "firstName":"John",
-    "lastName":"Kamau",
-    "streetAddress":"Lincolin Rd.",
-    "city":"Miami",
-    "country":"USA",
-    "phone":"5573-425"
+    "email":"teddyomondi@gmail.com",
+    "userPassword":"teddy428!",
+    "firstName":"Teddy",
+    "lastName":"Omondi",
+    "streetAddress":"Kisumu - Kakamega Rd.",
+    "city":"Kakamega",
+    "country":"Kenya",
+    "phone":"0788783652"
 }
 
 
@@ -51,8 +62,8 @@ POST http://localhost:4000/users/login
 Content-Type: application/json
 
 {
-    "email": "maina254@gmail.com",
-    "userPassword": ">793+d8c"
+    "email": "petercullen@gmail.com",
+    "userPassword": "Tr4ns4mars"
 }
 
 #************ END | USERS  ***********#
@@ -64,13 +75,13 @@ Content-Type: application/json
 ######### ADD PRODUCT ###########
 POST http://localhost:4000/products
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjEzMyIsImVtYWlsIjoibWFpbmEyNTRAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiRGVyaWNrIiwibGFzdE5hbWUiOiJNYWluYSIsImlzRGVsZXRlZCI6MCwiaXNBZG1pbiI6MCwiaWF0IjoxNjg0MDAyMTM0LCJleHAiOjE2ODQzNjIxMzR9.GQANXMvzdjpIn8pvnX1lkXQz1xx5rvz36feHTdSFbJU
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNzFjMDcyYS1hODlhLTRjZmItODBhZi1jNjZjOGY1ODk2N2QiLCJlbWFpbCI6InBldGVyY3VsbGVuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlBldGVyIiwibGFzdE5hbWUiOiJDdWxsZW4iLCJpc0RlbGV0ZWQiOjAsImlzQWRtaW4iOjAsImVtYWlsc1JlY2VpdmVkIjowLCJpYXQiOjE2ODQwNjk3ODYsImV4cCI6MTY4NDQyOTc4Nn0.A7SaZNmBEVR-2lK2JP3L153VAHbMACVpxnoItmyeJzY
 
 {
-    "productName": "HP Omen",
+    "productName": "Macbook Mini",
     "productImage": "/product/img",
-    "productDescription": "A Sleek and Modern Gaming Laptop.",
-    "price": 6000
+    "productDescription": "The mac mini desktop.",
+    "price": 7500
 }
 
 # {
@@ -91,7 +102,7 @@ Content-Type: application/json
     "productName": "SVS SB-4000",
     "productImage": "/product/img",
     "productDescription": "Breathtaking output below 15Hz with pinpoint accuracy for reference performance.",
-    "price": 4200
+    "price": 4300
 }
 
 

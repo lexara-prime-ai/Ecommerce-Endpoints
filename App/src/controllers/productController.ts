@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { DB_OPERATIONS } from '../helpers/DB_OPERATIONS';
-import { Product } from '../../types';
+import { Info, Product } from '../../types';
 import crypto from 'crypto';
 
 // EXPORT MODULE | addProduct
@@ -12,7 +12,7 @@ export const addProduct = async (req: Product, res: Response) => {
             productName,
             productImage,
             productDescription,
-            price 
+            price
         } = req.body;
         // CHECK IF token INFO EXISTS & READ TOKEN INFO i.e identify product owner from the  token used
         if (req.info) {
@@ -23,14 +23,14 @@ export const addProduct = async (req: Product, res: Response) => {
                 productImage,
                 productDescription,
                 price,
-                owner: req.info.userId
+                // owner: req.info?.userId
             });
         }
         return res.status(201).json({
             message: 'Product added successfully!'
         });
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -55,7 +55,7 @@ export const deleteProduct = async (req: Product, res: Response) => {
             message: 'Product deleted successfully!'
         });
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -93,7 +93,7 @@ export const updateProduct = async (req: Product, res: Response) => {
             message: 'Product updated successfully!'
         })
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -105,7 +105,7 @@ export const getAllProducts = async (req: Product, res: Response) => {
 
         res.status(200).json(products)
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -126,6 +126,6 @@ export const getProductById = async (req: Product, res: Response) => {
 
         res.status(200).json(product);
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }

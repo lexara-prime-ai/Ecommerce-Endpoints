@@ -25,6 +25,6 @@ SERVER.use('/products', productRoutes);
 
 // LISTEN TO CONNECTIONS ON THE SPECIFIED PORT
 SERVER.listen(PORT, () => {
-    log(`Server is listening at : http://localhost:${PORT}`);
+    log(`Server is listening at: http://localhost:${PORT}`);
 })
 

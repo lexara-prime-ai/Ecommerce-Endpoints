@@ -27,7 +27,7 @@ export const VERIFY_TOKEN = (req: Info, res: Response, next: NextFunction) => {
     } catch (error: any) {
         // FORBIDDEN : Deny user access if the request body 
         // does not contain a valid token
-        res.status(403).json(error.message);
+        res.status(403).json(`ERROR: ${error.message}`);
     }
     // CALL NEXT FUNCTION IN ORDER TO LET THE REQUEST PROCEED
     next();

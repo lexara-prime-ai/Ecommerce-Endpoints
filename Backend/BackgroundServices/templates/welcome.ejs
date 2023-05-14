@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome! | Thank You For Signing Up</title>
+</head>
+
+<style>
+    /* GOOGLE FONTS */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+        background: #242424;
+        color: #eee;
+    }
+
+    .message-container {
+        max-width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30vh;
+        border: 4px solid #eee;
+        background: #fff;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, .3);
+        color: #242424;
+        border-radius: 12px;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .message-title span {
+        font-weight: 400
+    }
+
+    .message-title {
+        margin-bottom: 1rem;
+    }
+</style>
+
+<body>
+    <main id="root">
+
+        <div class="message-container">
+            <h2 class="message-title">
+                Welcome <%= name %>, Thank you for Signing Up with
+                    <span>
+                        Msoko
+                    </span>
+            </h2>
+
+            <p class="sub-text">
+                We hope you'll enjoy your stay!
+            </p>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -8,7 +8,6 @@ import { VERIFY_TOKEN } from "../middleware/verifyToken";
 // INITIALIZE ROUTER
 const productRoutes = Router();
 // ROUTES
-// POST
 productRoutes.post('', VERIFY_TOKEN, addProduct); // ADD PRODUCT
 productRoutes.delete('/:productId', deleteProduct); // DELETE PRODUCT
 productRoutes.put('/:productId', updateProduct); // UPDATE PRODUCT

@@ -6,7 +6,6 @@ import crypto from 'crypto';
 //// DEBUGGING | LOGGING ////
 import { log } from 'console';
 /////////////////////////////
-import { User } from '../../types';
 import { DB_OPERATIONS } from '../helpers/DB_OPERATIONS';
 import { validationSchema } from '../helpers/LOGIN_VALIDATION';
 import bcrypt from 'bcrypt';
@@ -29,7 +28,7 @@ export const getUserById = async (req: Request<{ userId: string }>, res: Respons
         }
         return res.status(200).json(user);
     } catch (error: any) {
-        return res.status(500).json(error);
+        return res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -40,7 +39,7 @@ export const getUsers = async (req: Request, res: Response) => {
         let users = await (await DB_OPERATIONS.EXECUTE('getUsers')).recordset;
         res.status(200).json(users);
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -87,7 +86,7 @@ export const addUser = async (req: Request, res: Response) => {
             message: 'User added successfully!'
         });
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -134,7 +133,7 @@ export const updateUser = async (req: Request, res: Response) => {
             message: 'User updated successfully!'
         });
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -154,7 +153,7 @@ export const deleteUser = async (req: Request, res: Response) => {
             message: 'User deleted!'
         });
     } catch (error: any) {
-        res.status(500).json(error.message);
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
 
@@ -201,6 +200,6 @@ export const loginUser = async (req: Request, res: Response) => {
             token
         });
     } catch (error: any) {
-        res.status(500).json(error.message)
+        res.status(500).json(`ERROR: ${error.message}`);
     }
 }
