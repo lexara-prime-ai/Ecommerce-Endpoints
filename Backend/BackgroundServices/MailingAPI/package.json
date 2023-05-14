@@ -1,13 +1,13 @@
 {
-  "name": "ecommerce_background_services",
+  "name": "mail-api",
   "version": "1.0.0",
-  "description": "Background services(i.e Mailing, Promos etc)",
+  "description": "Service Mail API",
   "main": "./build/index.js",
   "scripts": {
     "build": "tsc",
     "start": "nodemon ./build/index.js"
   },
-  "author": "Samuel Ndmbuki & Irfan Ghat",
+  "author": "Irfan Ghat",
   "license": "ISC",
   "dependencies": {
     "@types/dotenv": "^8.2.0",
