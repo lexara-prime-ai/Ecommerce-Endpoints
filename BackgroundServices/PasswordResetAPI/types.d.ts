@@ -26,7 +26,7 @@ interface Product extends Request {
     params: {
         productId: string
     },
-    info?:decodedData
+    info?: decodedData
 }
 
 interface User extends Request {
@@ -43,4 +43,15 @@ interface User extends Request {
     params: {
         userId: string
     }
+}
+
+interface ExtendedRequest extends Request {
+    email: string
+    userPassword: string
+    firstName: string
+    lastName: string
+    streetAddress: string
+    city: string
+    country: string
+    phone: string
 }

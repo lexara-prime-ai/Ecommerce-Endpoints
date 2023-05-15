@@ -1,16 +1,25 @@
 #********** TESTS *********#
 
-PUT http://localhost:8000/reset/newPassword
+PUT http://localhost:8000/reset/password/marymagdalene@gmail.com
 Content-Type: application/json
-token:
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjOTg0NzYzMi05NGE2LTQwYjEtOTVhNS1lYTE1MmM1NDhmMTAiLCJlbWFpbCI6Im1hcnltYWdkYWxlbmVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiTWFyeSIsImxhc3ROYW1lIjoiTWFnZGFsZW5lIiwiaXNEZWxldGVkIjowLCJpc0FkbWluIjowLCJlbWFpbHNSZWNlaXZlZCI6MCwiaWF0IjoxNjg0MTY0Nzk1LCJleHAiOjE2ODQ1MjQ3OTV9.F382OydMLPwq56T7blOR3alnOzzolBiC6_Co61ys4g8
 
 {
-    "email": "",
-    "userPassword": ""
+    "email": "marymagdalene@gmail.com",
+    "userPassword": "newpassword2023"
 }
 
-##########
 
-
-GET http://localhost:8000/reset/petercullen@gmail.com
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNzFjMDcyYS1hODlhLTRjZmItODBhZi1jNjZjOGY1ODk2N2QiLCJlbWFpbCI6InBldGVyY3VsbGVuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlBldGVyIiwibGFzdE5hbWUiOiJDdWxsZW4iLCJpc0RlbGV0ZWQiOjAsImlzQWRtaW4iOjAsImVtYWlsc1JlY2VpdmVkIjowLCJpYXQiOjE2ODQwODgyNjIsImV4cCI6MTY4NDQ0ODI2Mn0.RlPLZ63GEZfZdbwzl9QZSUhijApCnxQlQsqpzkvGuFY
+##### REQUEST FOR PASSWORD RESET | When a user is redirected to this page, 
+#       a new token is assigned to them       
+#
+#                **Password Reset Page**
+#
+#               Email: __________________
+#       
+#                 ********************
+#                 |   RESET BUTTON   |
+#                 ********************
+# 
+# THE FOLLOWING REQUEST WITH SEND AN EMAIL WITH A RESET LINK
+GET http://localhost:8000/reset/marymagdalene@gmail.com

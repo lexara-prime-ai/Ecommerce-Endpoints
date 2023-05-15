@@ -42,7 +42,7 @@ PUT http://localhost:4000/users/0aafae19-8d15-455b-a1a6-2aeb77534c88
 Content-Type: application/json
 
 {
-    "email":"teddyomondi@gmail.com",
+    "email":"stacknewbie@gmail.com",
     "userPassword":"teddy428!",
     "firstName":"Teddy",
     "lastName":"Omondi",
