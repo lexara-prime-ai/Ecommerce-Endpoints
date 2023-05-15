@@ -1,0 +1,16 @@
+#********** TESTS *********#
+
+PUT http://localhost:8000/reset/newPassword
+Content-Type: application/json
+token:
+
+{
+    "email": "",
+    "userPassword": ""
+}
+
+##########
+
+
+GET http://localhost:8000/reset/petercullen@gmail.com
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNzFjMDcyYS1hODlhLTRjZmItODBhZi1jNjZjOGY1ODk2N2QiLCJlbWFpbCI6InBldGVyY3VsbGVuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlBldGVyIiwibGFzdE5hbWUiOiJDdWxsZW4iLCJpc0RlbGV0ZWQiOjAsImlzQWRtaW4iOjAsImVtYWlsc1JlY2VpdmVkIjowLCJpYXQiOjE2ODQwODgyNjIsImV4cCI6MTY4NDQ0ODI2Mn0.RlPLZ63GEZfZdbwzl9QZSUhijApCnxQlQsqpzkvGuFY

@@ -66,22 +66,24 @@ Content-Type: application/json
     "userPassword": "Tr4ns4mars"
 }
 
-#************ END | USERS  ***********#
-
-#*****************************************#
-#*********** PRODUCT REQUESTS ***********#
-#****************************************#
+#************* END | USERS  ************#
+#                                       #
+#             WHITE SPACE               #
+#                                       #
+#***************************************#
+#********** PRODUCT REQUESTS ***********#
+#***************************************#
 
 ######### ADD PRODUCT ###########
 POST http://localhost:4000/products
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNzFjMDcyYS1hODlhLTRjZmItODBhZi1jNjZjOGY1ODk2N2QiLCJlbWFpbCI6InBldGVyY3VsbGVuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlBldGVyIiwibGFzdE5hbWUiOiJDdWxsZW4iLCJpc0RlbGV0ZWQiOjAsImlzQWRtaW4iOjAsImVtYWlsc1JlY2VpdmVkIjowLCJpYXQiOjE2ODQwNjk3ODYsImV4cCI6MTY4NDQyOTc4Nn0.A7SaZNmBEVR-2lK2JP3L153VAHbMACVpxnoItmyeJzY
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNzFjMDcyYS1hODlhLTRjZmItODBhZi1jNjZjOGY1ODk2N2QiLCJlbWFpbCI6InBldGVyY3VsbGVuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlBldGVyIiwibGFzdE5hbWUiOiJDdWxsZW4iLCJpc0RlbGV0ZWQiOjAsImlzQWRtaW4iOjAsImVtYWlsc1JlY2VpdmVkIjowLCJpYXQiOjE2ODQxNDQ4NDAsImV4cCI6MTY4NDUwNDg0MH0.ysz2w7IVkyC9HV2MgbmMXD9Rx43VTOyKC4cFa9cL0Sc
 
 {
-    "productName": "Macbook Mini",
+    "productName": "Samsung Galaxy",
     "productImage": "/product/img",
-    "productDescription": "The mac mini desktop.",
-    "price": 7500
+    "productDescription": "Samsung Galaxy A24.",
+    "price": 7000
 }
 
 # {
@@ -110,5 +112,5 @@ Content-Type: application/json
 GET http://localhost:4000/products
 
 ####### GET PRODUCT BY ID ########
-GET http://localhost:4000/products/687a7a79-e292-43b2-9fc0-1566aed48735
+GET http://localhost:4000/products/6c1b6fd0-3bf0-44ce-b05c-edc20151bc35
 #************ END | PRODUCTS  ************#

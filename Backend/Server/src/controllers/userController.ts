@@ -116,7 +116,7 @@ export const updateUser = async (req: Request, res: Response) => {
 
         // ENCRYPT UPDATED PASSWORD
         let hashedPassword = await bcrypt.hash(userPassword, 10);
-
+        // EXECUTE STORED PROCEDURE TO UPDATE USER
         await DB_OPERATIONS.EXECUTE('updateUser', {
             userId,
             email,
@@ -192,7 +192,7 @@ export const loginUser = async (req: Request, res: Response) => {
             } = userInfo;
             return rest;
         })
-
+        // GENERATE TOKEN AND ASSIGN TO USER
         const token = jwt.sign(payload[0], process.env.SECRET_KEY as string, { expiresIn: '360000s' });
 
         return res.status(200).json({

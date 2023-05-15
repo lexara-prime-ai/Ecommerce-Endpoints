@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { DB_OPERATIONS } from '../helpers/DB_OPERATIONS';
-import { Info, Product } from '../../types';
+import { Product } from '../../types';
 import crypto from 'crypto';
 
 // EXPORT MODULE | addProduct
@@ -22,8 +22,7 @@ export const addProduct = async (req: Product, res: Response) => {
                 productName,
                 productImage,
                 productDescription,
-                price,
-                // owner: req.info?.userId
+                price
             });
         }
         return res.status(201).json({
@@ -117,7 +116,7 @@ export const getProductById = async (req: Product, res: Response) => {
         // EXECUTE STORED PROCEDURE TO GET PRODUCT BY ID
         let product = (await DB_OPERATIONS.EXECUTE('getProductById', { productId })).recordset[0];
 
-        // DISPLAY ERROE IF PRODUCT IS NOT FOUND
+        // DISPLAY ERROR IF PRODUCT IS NOT FOUND
         if (!product) {
             return res.status(404).json({
                 message: 'Product not found!'
