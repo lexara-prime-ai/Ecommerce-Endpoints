@@ -26,7 +26,7 @@ export const INIT_MAIL_SERVER = async (USER_EMAIL: string) => {
     let htmlContent = `
         <h4>
             Use the following passcode to reset your account | <span>9PrsfwMBJj</span>
-            <a href="http://localhost:8000/resetPassword">
+            <a href="http://localhost:8000/reset/password/${USER_EMAIL}">                   
                 Reset password
             </a>
         </h4>

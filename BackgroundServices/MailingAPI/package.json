@@ -1,13 +1,13 @@
 {
-  "name": "mail-api",
+  "name": "mailing-api",
   "version": "1.0.0",
-  "description": "Service Mail API",
-  "main": "./build/index.js",
+  "description": "Mailing API",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon ./build/index.js"
+    "start": "npm run build && nodemon ./dist/index.js"
   },
-  "author": "Irfan Ghat",
+  "author": "Samuel Ndambuki",
   "license": "ISC",
   "dependencies": {
     "@types/dotenv": "^8.2.0",

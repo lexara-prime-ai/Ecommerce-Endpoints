@@ -10,3 +10,7 @@
 /BackgroundServices/PasswordResetAPI/build
 /BackgroundServices/PasswordResetAPI/.env
 
+/Server/build
+/Server/node_modules
+/Server/.env
+

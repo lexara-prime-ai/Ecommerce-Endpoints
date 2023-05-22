@@ -1,12 +1,12 @@
 #********** TESTS *********#
 
-PUT http://localhost:8000/reset/password/marymagdalene@gmail.com
+PUT http://localhost:8000/reset/password/stacknewbie@gmail.com
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjOTg0NzYzMi05NGE2LTQwYjEtOTVhNS1lYTE1MmM1NDhmMTAiLCJlbWFpbCI6Im1hcnltYWdkYWxlbmVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiTWFyeSIsImxhc3ROYW1lIjoiTWFnZGFsZW5lIiwiaXNEZWxldGVkIjowLCJpc0FkbWluIjowLCJlbWFpbHNSZWNlaXZlZCI6MCwiaWF0IjoxNjg0MTY0Nzk1LCJleHAiOjE2ODQ1MjQ3OTV9.F382OydMLPwq56T7blOR3alnOzzolBiC6_Co61ys4g8
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYWFmYWUxOS04ZDE1LTQ1NWItYTFhNi0yYWViNzc1MzRjODgiLCJlbWFpbCI6InN0YWNrbmV3YmllQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Ik51ciIsImxhc3ROYW1lIjoiT21vbmRpIiwiaXNEZWxldGVkIjowLCJpc0FkbWluIjowLCJlbWFpbHNSZWNlaXZlZCI6MCwiaWF0IjoxNjg0Nzg1NjQ1LCJleHAiOjE2ODUxNDU2NDV9.sPItvxu6-zafyAVeoeZz7XNmapyeaPCSn60iTwJ4nHk
 
 {
-    "email": "marymagdalene@gmail.com",
-    "userPassword": "newpassword2023"
+    "email": "stacknewbie@gmail.com",
+    "userPassword": "newpwd2023"
 }
 
 
@@ -22,4 +22,4 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjOTg0NzYzMi05NGE2LTQw
 #                 ********************
 # 
 # THE FOLLOWING REQUEST WITH SEND AN EMAIL WITH A RESET LINK
-GET http://localhost:8000/reset/marymagdalene@gmail.com
+GET http://localhost:8000/reset/stacknewbie@gmail.com

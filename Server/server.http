@@ -1,0 +1,98 @@
+#*************************************#
+#*********** USER REQUESTS ***********#
+#*************************************#
+
+########### GET USER BY ID #############
+GET http://localhost:4000/users/bee2f213-39d2-42a3-990c-f9836fbb848e
+
+
+########### GET ALL USERS #############
+GET http://localhost:4000/users
+
+
+########### ADD A USER #############
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "email":"jonathanndambuki@gmail.com",
+    "userPassword":"M4nch3st3r4Lyf",
+    "firstName":"Jonathan",
+    "lastName":"Ndambuki",
+    "streetAddress":"Baga Toiruu",
+    "city":"Ulaanbaatar",
+    "country":"Asia",
+    "phone":"99-628616"
+}
+
+
+########### UPDATE USER #############
+PUT http://localhost:4000/users/0aafae19-8d15-455b-a1a6-2aeb77534c88
+Content-Type: application/json
+
+{
+    "email":"stacknewbie@gmail.com",
+    "userPassword":"MoF9h{0};~!",
+    "firstName":"Nur",
+    "lastName":"Omondi",
+    "streetAddress":"Karen Rd.",
+    "city":"Nairobi",
+    "country":"Kenya",
+    "phone":"0788783652"
+}
+
+
+######## DELETE USER ###########
+DELETE http://localhost:4000/users/1212o2331
+
+
+######## LOGIN USER ###########
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "email": "jonathanndambuki@gmail.com",
+    "userPassword": "M4nch3st3r4Lyf"
+}
+
+#************* END | USERS  ************#
+                                       
+#             WHITE SPACE               #
+                                       
+#***************************************#
+#********** PRODUCT REQUESTS ***********#
+#***************************************#
+
+######### ADD PRODUCT ###########
+POST http://localhost:4000/products
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3NzA2NWYwMy05NTgwLTQ2ZDAtOTBhNi01NmMxZWRlNmYwZTkiLCJlbWFpbCI6ImpvbmF0aGFubmRhbWJ1a2lAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiSm9uYXRoYW4iLCJsYXN0TmFtZSI6Ik5kYW1idWtpIiwiaXNEZWxldGVkIjowLCJpc0FkbWluIjowLCJlbWFpbHNSZWNlaXZlZCI6MCwiaWF0IjoxNjg0NDEyNDQ0LCJleHAiOjE2ODQ3NzI0NDR9.f6brAnYCV-JmS0JxW0AS6bmvxGDNzIAX7xex2M_IvtI
+
+{
+    "productName": "Iphone X",
+    "productImage": "/product/img",
+    "productDescription": "The definition of innovation.",
+    "price": 10000
+}
+
+######### DELETE PRODUCT ##########
+DELETE http://localhost:4000/products/12222
+
+######## UPDATE PRODUCT ###########
+PUT http://localhost:4000/products/687a7a79-e292-43b2-9fc0-1566aed48735
+Content-Type: application/json
+
+{
+    "productName": "SVS SB-4000",
+    "productImage": "/product/img",
+    "productDescription": "Breathtaking output below 15Hz with pinpoint accuracy for reference performance.",
+    "price": 4500
+}
+
+
+######### GET ALL PRODUCTS ##########
+GET http://localhost:4000/products
+
+####### GET PRODUCT BY ID ########
+GET http://localhost:4000/products/6c1b6fd0-3bf0-44ce-b05c-edc20151bc35
+#************ END | PRODUCTS  ************#
